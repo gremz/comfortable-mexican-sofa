@@ -8,14 +8,15 @@
       const locale = CMS.getLocale();
       for (const datetime of datetimes) {
         flatpickrInstances.push(flatpickr(datetime, {
-          format: 'yyyy-mm-dd hh:ii',
+          format: 'Y-m-d h:i K',
+          dateFormat: 'Z',
           enableTime: true,
           locale: locale,
         }));
       }
       for (const date of dates) {
         flatpickrInstances.push(flatpickr(date, {
-          format: 'yyyy-mm-dd',
+          format: 'Y-m-d',
           locale: locale,
         }));
       }
